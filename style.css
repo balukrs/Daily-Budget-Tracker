@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap');
+
+:root{
+  --primaryColor-:#595959;
+  --secondaryColor-:#A6A6A6;
+  --boxShadow-: 10px 10px 31px -13px rgba(0,0,0,0.89);
+  --boxShadowLight-:10px 10px 19px 0px rgba(77, 76, 76, 0.85);
+}
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Mono', monospace;
+  background-color: #A1A4A6;
+}
+.container{
+  margin: 20px auto;
+  padding: 0.5rem;
+}
+.heading{
+  border: 1px solid black;
+  display:flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 21%;
+  padding: 0 5px;
+  margin: 20px auto;
+}
+h2{
+  margin:0;
+  font-weight: 900;
+}
+h3{
+  margin: 0;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+h5{
+  margin:0;
+}
+.activity{
+  display: grid;
+  grid-template-columns: 300px 800px;
+  grid-template-rows: minmax(200px, max-content) minmax(200px, max-content);
+  justify-content: center;
+  padding:0.5rem;
+  height: 100vh;
+  grid-gap:10px;
+}
+/* FORMS */
+.formContainer{
+  width: 95%;
+  position: relative;
+  background-color: white;
+  padding: 0.5rem;
+  box-shadow: var(--boxShadow-);
+}
+.formContainer input{
+  display: block;
+  margin: 15px 0;
+  width: 93%;
+  padding: 0.3rem;
+}
+.form1 input[type="date"]{
+ width: 50%;
+ padding: 0.3rem;
+}
+.btn{
+padding: 0.7rem;
+width: 99.9%;
+border: none;
+border-radius: 3px;
+}
+.btn:hover{
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.form1{
+  margin-bottom: 25px;
+}
+.form2{
+    height: 0;
+    overflow: hidden;
+    animation: slide 1s ease forwards;
+}
+.form2 #form2date{
+  margin:0;
+}
+@keyframes slide{
+  from {height: 0;}
+  to {height: 300px;}
+}
+.switch{
+padding: 0.3rem;
+width: 96.9%;
+border: none;
+border-radius: 3px;
+margin-top: 5px;
+cursor: pointer;
+background-color: rgb(236, 122, 122);
+text-align: center;
+}
+.switch:hover{
+  background-color: red;
+  color: aliceblue;
+}
+/* BUDGET VIEW */
+.budgetContainer{
+  position: relative;
+}
+.balanceContainer{
+  margin-bottom: 20px;
+}
+.balanceAmount{
+  font-size: 2rem; 
+}
+
+.income_expense{
+  background-color: white;
+  padding:20px;
+  display: flex;
+  justify-content: space-evenly;
+  width:87%;
+  height:24.5%;
+  box-shadow: var(--boxShadow-);
+}
+.inc{
+  margin-right: 20px;
+  text-align: center;
+}
+.incomeAmt{
+  font-size: larger;
+  color: green;}
+.expenseAmt{
+  font-size: larger;
+  color: red;}
+.exp{
+  margin-left: 20px;
+  text-align: center;
+}
+.border{
+  background-color: rgb(224, 218, 218);
+  width: 2px;
+}
+/* TASK BAR */
+.list{
+  background-color: white;
+  padding:0 15px;
+  box-shadow: var(--boxShadow-);
+}
+.listContainer{
+  list-style-type: none;
+  padding: 0;
+}
+.listitem{
+background-color: var(--primaryColor-);
+margin: 5px 0;
+padding: 5px;
+border-radius: 3px;
+display: flex;
+justify-content:space-around;
+color: whitesmoke;
+align-items: center;
+}
+.viewNotebtn,.viewBudgetbtn{
+border: none;
+background-color: var(--secondaryColor-);
+cursor: pointer;
+padding: 4px;
+margin: 0 5px;
+}
+.viewNotebtn:hover,.viewBudgetbtn:hover{
+  background-color: #262626;
+  color: whitesmoke;
+}
+.viewNotebtn:focus,.viewBudgetbtn:focus{
+  outline: none;
+}
+.close{
+  background-color: rgba(0,0,0,0.3);
+  padding: 0 7px;
+  flex: none;
+  height:23px;
+  cursor: pointer;
+}
+.closed{
+    background-color: rgba(0,0,0,0.3);
+    padding: 0 7px;
+    flex: none;
+    height:23px;
+    cursor: pointer;
+}
+.close:hover,.closed:hover{
+  background-color: rgb(214, 45, 45);
+}
+.wid{
+  min-width: 190px;
+}
+.id{
+  display: none;
+}
+/* Notes */
+.displayCotainer{
+  padding: 10px;
+  height: 220px;
+  background-color: rgba(90, 74, 74, 0.3);
+  position: relative;
+}
+.toggle{
+  display: none;
+}
+.edit.block{
+  display: none;
+}
+.editSubmit.block{
+  display: none;
+}
+.editbutton,.editSubmit{
+border: none;
+background-color: var(--primaryColor-);
+cursor: pointer;
+padding: 6px;
+margin-right: 5px;
+color: whitesmoke;
+}
+.editbutton:focus,.editSubmit:focus{
+  outline: none;
+}
+
+/* TRANSACTIONS */
+.transferContainer{
+  display: grid;
+  grid-template-columns: repeat(4,auto);
+  list-style-type: none;
+  grid-gap:5px;
+  text-align: center;
+  padding: 0;
+}
+.transferContainer li{
+  background-color: white;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 3px;
+  box-shadow: var(--boxShadowLight-);
+}
+.plus{
+  border-right: 5px rgb(49, 190, 49) solid;
+}
+.minus{
+  border-right: 5px red solid;
+}
+#detaildate{
+  margin-left: 10px;
+}
+.amid{
+  display: none;
+}

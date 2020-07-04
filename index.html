@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="checkbox.css">
+  <title>DAILY TO_DO TRACKER</title>
+</head>
+<body>
+<div class="container">
+<div class="heading"><h2>Daily Budget Tracker</h1></div>
+  <!-- SECTION Primary -->
+  <div class="activity" id="activity">
+
+  <!-- INPUT TAKS FORM -->
+    <div class="formContainer">
+    <form  class="form1" id="form1">
+    <h3>Transaction</h3>
+    <div>
+    <label for="date">Please choose Date</label>
+    <input type="date" id="date" name="date">
+    </div>
+    <input type="text" id="addTask" name="addTask" placeholder="Transaction Name" maxlength="50">
+    <button type="submit" class="btn" id="taskSubmit">Add Transaction Name</button>
+    </form>
+
+    <!-- INPUT BUDGET FORM -->
+   <form class="form2 toggle" id="form2">
+    <h3>Add Transcation Details</h3>
+    <p id="form2date"></p>
+    <input type="text" id="addDetails" name="addDetails" placeholder="Add Details">
+    <p>Please select Income/Expense</p>
+    
+    <div class="onoffswitch">
+      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked>
+      <label class="onoffswitch-label" for="myonoffswitch">
+          <span class="onoffswitch-inner"></span>
+          <span class="onoffswitch-switch"></span>
+      </label>
+    </div>
+
+    <input type="number" id="amount" name="amount" placeholder="Enter Amount">
+    <button type="submit" class="btn" id="budgetSubmit">Add Transcations</button>
+    <div class="switch" id="switch">Close</div>
+    </form>
+    </div>
+
+
+
+ <!-- TASK VIEWER -->
+    <div class="list" id="list">
+    <ul class="listContainer" id="listContainer">
+      <li>PLEASE ADD TRANSACTIONS</li>
+    <!-- <li class="listitem">
+     <span class="listHeading">Study</span>
+     <div>
+     <button class="viewNotebtn">View Note</button>
+     <button class="viewBudgetbtn">Add Budget</button>
+     </div>
+     <span class="viewDate">17-10-2019</span>
+     <span class="close">x</span>
+    </li> -->
+    
+    </ul>
+    </div>
+  
+
+     <!-- BUDGET VIEWER -->
+      <div class="budgetContainer" id="budgetContainer">
+    
+      <div class="balanceContainer" id="balanceContainer">
+      <h3>YOUR BALANCE</h3>
+      <span class="balanceAmount" id="balanceAmount">0.00</span>
+      </div>
+   
+      <div class="income_expense" id="income_expense">
+     
+      <div class="inc" id="inc">
+       <h5>INCOME</h5>
+       <p class="incomeAmt" id="incomeAmt">0.00</p>
+      </div>
+ 
+      <div class="border"></div>
+ 
+      <div class="exp" id="exp">
+       <h5>EXPENSE</h5>
+       <p class="expenseAmt" id="expenseAmt">0.00</p>
+      </div>
+      </div>
+      </div>
+
+      <!-- NOTES -->
+      <div class="displayCotainer" id="displayContainer">
+      <div class="notes toggle" id="notes">
+        <h3>Notes:<span id="notedate"></span></h3>
+        <p id="noty"></p>
+        <div class="edit block" id="edit">
+          <textarea name="textarea" id="textarea" cols="100" rows="3" maxlength="300"></textarea>
+        </div>
+        <button class="editbutton" id="editbutton">+</button><button class="editSubmit block" id="editSubmit">SUBMIT</button>
+      </div>
+        <div class="transfer" id="transfer">
+          <h3>Transcations<span id="detaildate"></span></h3>
+          <ul class="transferContainer">
+            <!-- <li class="plus">
+              <span class="transferHead">CAR</span>
+              <span class="transferAmt"><span>&#x20b9;</span>600</span>
+              <span class="close">x</span>
+            </li>
+            <li class="minus">
+              <span class="transferHead">CAR</span>
+              <span class="transferAmt"><span>&#x20b9;</span>600</span>
+              <span class="close">x</span>
+            </li> -->
+            <li>NO DETAILS AVAILABLE</li>
+            
+          </ul>
+        </div>
+      </div>
+  
+  
+  </div>
+
+
+  
+
+
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
